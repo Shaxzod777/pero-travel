@@ -1,0 +1,89 @@
+/* 💻 ≤ 1200px */
+@media (max-width: 1200px) {
+    .container {
+        width: 900px;
+        /* background-color: rgba(255, 0, 0, 0.456); */
+    }
+
+    .gallery {
+        display: none;
+        /* Временно скрываем */
+    }
+}
+
+/* 💻 ≤ 992px */
+@media (max-width: 992px) {
+    .container {
+        width: 700px;
+    }
+
+    .promo h1 {
+        font-size: 84px;
+    }
+
+    .tours_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 📱 ≤ 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 500px;
+    }
+
+    .promo h1 {
+        font-size: 60px;
+    }
+
+    .tours_grid {
+        grid-template-columns: repeat(1, minmax(200px, 400px));
+        justify-content: center;
+    }
+
+    .type_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .btn-menu {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        border: 0;
+        padding: 8px;
+        display: block;
+    }
+}
+
+/* 📱 ≤ 576px */
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .promo {
+        height: 540px;
+
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    .all {
+        display: none;
+    }
+
+    .bg_white {
+        width: 90%;
+        height: auto;
+    }
+
+    .about_text {
+        padding: 40px;
+    }
+}

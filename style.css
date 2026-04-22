@@ -1,0 +1,545 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+body{
+    font-family: Montserrat;
+}
+.container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+
+.promo {
+    background: url(./img/promo.jpg) no-repeat center / cover;
+    height: 789px;
+    color: white;
+}
+
+.promo h1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-block: 131px 43px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeSlideIn 1.2s ease-out forwards, floatPulse 2.5s ease-in-out infinite;
+    animation-delay: 0.3s, 1.5s; 
+}
+
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes floatPulse {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px) scale(1.04); }
+    100% { transform: translateY(0); }
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+}
+.header img {
+    display: block;
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.8s ease;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    
+}
+
+.btn-menu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu  a {
+font-family: Montserrat;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: white;
+text-decoration: none;
+}
+.menu a:hover {
+    transform: scale(1.1) translateY(-2px);
+    color: #ffd700; 
+}
+
+
+.menu a.active {
+color: #FFC700;
+}
+.menu a.active:hover {
+    transform: scale(1.1) translateY(-2px);
+    color:#ffd700; 
+}
+
+
+.btn {
+animation: fadeSlideIn 1s;
+width: 230px;
+height: 50px;
+background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+border-radius: 50px;
+border: 0;
+cursor: pointer;
+font-family: Montserrat;
+font-weight: 700;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: white;
+transition: all 0.5s ease;
+
+}
+.btn:hover {
+    transform: translateX(0) translateY(-2px) scale(1.2);
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px) translateY(0) scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+.move{
+    transition: all 0.5s ease;
+}
+.btn:hover svg {
+  transform: translateX(10px); 
+  transition: transform 0.3s ease;
+}
+
+
+.btn svg {
+  pointer-events: none;
+}
+
+.tours {
+padding-block: 90px 110px;
+}
+
+
+
+.tours_head {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 40px;
+}
+
+.popular{
+font-family: Montserrat;
+font-weight: 700;
+font-size: 24px;
+color: rgba(4, 153, 221, 1);
+transition: 0.6s ease;
+
+}
+.popular:hover{
+    transform: translateX(0) translateY(-2px) scale(1.2);
+
+}
+
+.all{
+font-family: Montserrat;
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+color: rgba(40, 40, 40, 1);
+transition: 0.6s ease;
+}
+.all:hover{
+    transform: translateX(0) translateY(-2px) scale(1.2);
+}
+
+.tours_grid{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.tours_elem {
+    padding-left: 16px;
+    border-radius: 10px;
+    color: white;
+    padding-block: 210px 42px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+
+.tours_elem:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tours_grid h3{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 199, 0, 1);
+    padding-bottom: 10px;
+}
+
+.tours_grid p{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    padding-block: 20px 20px;
+    padding-right: 16px;
+    text-align: left;
+
+}
+.second_p{
+    padding-bottom: 0px;
+}
+.info{
+    display: flex;
+    gap: 14px;
+}
+.info_item p{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    
+}
+.second_btn{
+    width: 160px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+   background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+   font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+.second_btn_2{
+    width: 160px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+   background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+   font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+}
+.second_btn_2:hover {
+    transform:  scale(1.1);
+    background: linear-gradient(92.71deg, #08a3eb 0%, #07efe7 100%);
+}
+.second_btn:hover {
+    transform:  scale(1.1);
+    background: linear-gradient(92.71deg, #08a3eb 0%, #07efe7 100%);
+}
+
+
+
+.about{
+    background-image: url(img/about.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-block: 136px 137px;
+
+}
+
+.bg_white {
+    width: 542px;
+    height: 476px;
+    border-radius: 10px;
+    background: rgba(237, 237, 237, 1);
+    margin: 0 auto;
+    animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1) translateY(0);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.03) translateY(-6px);
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.4),
+                    0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+
+.about_text{
+   padding: 61px 85px;
+
+}
+.about_text h3{
+    margin-bottom: 40px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color:  rgba(4, 153, 221, 1);
+}
+
+.about_text p{
+   font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-bottom: 30px;
+    text-align: left;
+    color: rgba(40, 40, 40, 1);
+}
+.type{
+    padding-block: 100px 100px;
+}
+.type h2{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: rgba(4, 153, 221, 1);
+    margin-bottom: 90px;
+}
+
+.type_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.type_elem h3{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(4, 153, 221, 1);
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+    
+}
+.type_elem h3:hover{
+    color: rgba(4, 153, 221, 1);
+    scale: 1.02;
+}
+.type_elem img{
+    margin-right: 20px;
+    transition: all 0.5s ease;
+
+}
+.type_elem:hover img {
+    transform: scale(1.2) rotate(360deg);
+}
+.type_elem p{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(40, 40, 40, 1);
+    transition: all 0.5s ease;  
+}
+.type_elem p:hover{
+    color: rgba(4, 153, 221, 1);
+    scale: 1.02;
+}
+.type_elem{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+
+.type_footer p{
+    margin-top: 60px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(40, 40, 40, 1);
+    padding-bottom: 40px;
+}
+
+.type_footer button{
+    width: 230px;
+    height: 50px;
+    border-radius: 60px;
+    border: none;
+    background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+    margin: 0 auto;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    transition: all 0.5s ease;
+    
+}
+.type_footer button:hover{
+    transform: translateX(0) translateY(-2px) scale(1.2);
+    background: linear-gradient(92.71deg, #03a5f1 0%, #06e6de 100%);
+
+}
+
+.relative{
+    position: relative;
+}
+.gallery_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    position: relative;
+    
+}
+.first{
+    position: absolute;
+    transition: all 0.5s ease;  
+}
+.first:hover{
+    transform: translateX(0) translateY(-2px) scale(1.02);
+}
+.second{
+    position: absolute;
+    left: 410px;
+    height: 564px;
+    transition: all 0.5s ease;  
+}
+.second:hover{
+    transform: translateX(0) translateY(-2px) scale(1.02);
+}
+.third{
+    position: absolute;
+    width: 212px;
+    height: 264px;
+    border-radius: 5px;
+    left: 710px;
+   transition: all 0.5s ease;  
+}
+.third:hover{
+    transform: translateX(0) translateY(-2px) scale(1.04);
+}
+.four{
+    position: absolute;
+    width: 172;
+    height: 264;
+    border-radius: 5px;
+    left: 936px;
+    transition: all 0.5s ease;  
+}
+.four:hover{
+    transform: translateX(0) translateY(-2px) scale(1.04);
+}
+.five{
+    position: absolute;
+    top: 300px;
+    transition: all 0.5s ease;  
+}
+.five:hover{
+    transform: translateX(0) translateY(-2px) scale(1.04);
+}
+.six{
+    top: 300px;
+    position: absolute;
+    left: 190px;
+    transition: all 0.5s ease;  
+}
+.six:hover{
+    transform: translateX(0) translateY(-2px) scale(1.04);
+}
+.seven{
+    top: 440px;
+    position: absolute;
+    left: 190px;
+    transition: all 0.5s ease;  
+}
+.seven:hover{
+    transform: translateX(0) translateY(-2px) scale(1.04);
+}
+.eight{
+    position: absolute;
+    top: 283px;
+    left: 710px;
+    transition: all 0.5s ease; 
+    
+}
+.eight:hover{
+    transform: translateX(0) translateY(-2px) scale(1.04);
+}
+
+.gallery_grid{
+    margin-bottom: 600px;
+}
